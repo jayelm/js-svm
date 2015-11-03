@@ -19,81 +19,51 @@
     #io {
       display: inline-block;
       vertical-align: top;
-      width: 500px;
-    }
-
-    input, textarea {
-      font-family: monospace !important;
-    }
-
-    #inputs label {
-      float: left;
-      display: inline-block;
-      margin-right: 10px;
-    }
-
-    #inputs input {
-      display: block;
-    }
-
-    #inputs button {
-      display: block;
-      width: 100px;
-      height: 50px;
-      background: white;
-      border: 2px solid black;
-    }
-
-    #inputs button:hover {
-      background: #ddd;
     }
 
   </style>
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 </head>
 
 <body>
   <div id="main">
-    <textarea rows="30" cols="50" id="text" placeholder="Enter program instructions here, line by line, separated by semicolons" spellcheck="false"></textarea>
+    <textarea rows="50" cols="50" id="text" placeholder="Enter program instructions here, line by line, separated by semicolons" spellcheck="false"></textarea>
   </div>
 
   <div id="io">
     <h1>Simple SVM Machine</h1>
-    <p>A JavaScript interpreter of OCaml Simple Virtual Machine syntax.</p>
+    <p>A JavaScript interpreter of OCaml Simple Virtual Machine syntax as specified in PS6 and Lab 10.</p>
     <h2>Input</h2>
-    <div id="inputs">
     <label for="ram">RAM (must be valid OCaml list syntax)</label>
-    <input id="ram" name="ram">
+    <input id="ram" name="ram"><br>
 
     <label for="initialpc">Initial PC</label>
-    <input id="initialpc" name="Initial PC" type="number" value="0">
+    <input id="initialpc" name="Initial PC" type="number" value="0"><br>
 
     <label for="recursionlimit">Recursion Limit (be careful with this one)</label>
-    <input id="recursionlimit" type="number" value="100">
+    <input id="recursionlimit" type="number" value="100"><br>
 
     <h2>Output</h2>
     <label for="PC">PC</label>
-    <input id="PC" name="PC" type="number" readonly="readonly">
+    <input id="PC" name="PC" type="number" readonly="readonly"><br>
 
     <label for="PC">PSW</label>
-    <input id="PSW" name="PSW" type="number" readonly="readonly">
+    <input id="PSW" name="PSW" type="number" readonly="readonly"><br>
 
     <label for="R0">R0</label>
-    <input id="R0" name="R0" type="number" readonly="readonly">
+    <input id="R0" name="R0" type="number" readonly="readonly"><br>
 
     <label for="R1">R1</label>
-    <input id="R1" name="R1" type="number" readonly="readonly">
+    <input id="R1" name="R1" type="number" readonly="readonly"><br>
 
     <label for="R2">R2</label>
-    <input id="R2" name="R2" type="number" readonly="readonly">
+    <input id="R2" name="R2" type="number" readonly="readonly"><br>
 
     <label for="R3">R3</label>
-    <input id="R3" name="R3" type="number" readonly="readonly">
+    <input id="R3" name="R3" type="number" readonly="readonly"><br>
 
     <textarea style="color: red;" id="error" readonly="readonly" placeholder="Any error output will go here." spellcheck="false"></textarea>
 
-    <button onclick="rsv()">Run SVM</button>
-    </div>
+    <button onclick="runSVM()">Run SVM</button>
   </div>
   <script src="svm-min.js"></script>
 </body>
